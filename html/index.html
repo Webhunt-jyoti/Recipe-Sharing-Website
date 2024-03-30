@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yummy</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/signup.css">
+  <link rel="stylesheet" href="/css/sign.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Rubik+Pixels&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="dark-theme">
+    <div class="container">
+      <!-- side bar -------------------------------- -->
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="index.html">Home</a>
+        <a href="#createRecipe">Recipes</a>
+        <a href="#Categories">Categories </a>
+        <a href="#About-Us">About Us</a>
+        <a href="#">Sign Up</a>
+        <a href="#">Sign In</a>
+      </div>
+
+      <div id="main">
+        <button class="openbtn" onclick="openNav()">☰ </button>
+
+
+      </div>
+      <!-- close sidebar------------------------------- -->
+
+      <div class="logo">
+        <!-- <img src="logo.png" alt="Recipe Sharing Website"> -->
+        <h1 class="logo-heading">Yummy</h1>
+      </div>
+      <nav class="navv">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#createRecipe">Recipes</a></li>
+          <li><a href="#Categories">Categories</a></li>
+          <li><a href="#About-Us">About Us</a></li>
+          <li><a href="#" id="signupBtn">Sign Up</a></li>
+          <li><a href="#" id="signinBtn">Sign In</a></li>
+          <li id="filter-option-toggle"><a href="#">Apply Filters </a></li>
+        </ul>
+      </nav>
+
+      <div class="search-bar">
+        <!-- <input type="text" placeholder="Search for recipes">
+        <button type="submit">Search</button> -->
+        <input type="text" id="search-bar" placeholder="Search for recipes...">
+
+        <div class="autocomplete">
+          <!-- Autocomplete suggestions will appear here -->
+        </div>
+        <div class="filters" style="display: none;position: absolute;z-index: 10;">
+
+          <!-- Filters content -->
+          <div class="filter-option">
+            <label for="cuisine-type">Cuisine Type:</label>
+            <select id="cuisine-type" name="cuisine-type">
+              <option value="">Any</option>
+              <option value="italian">Italian</option>
+              <option value="mexican">Mexican</option>
+              <option value="indian">Indian</option>
+              <!-- Add more cuisine types as needed -->
+            </select>
+          </div>
+
+          <div class="filter-option">
+            <label for="meal-type">Meal Type:</label>
+            <select id="meal-type" name="meal-type">
+              <option value="">Any</option>
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+              <!-- Add more meal types as needed -->
+            </select>
+          </div>
+
+          <!-- Add more filter options (e.g., dietary preferences, cooking time, difficulty level) -->
+
+          <button id="apply-filters">Apply Filters</button>
+        </div>
+        <button type="submit" class="button1">Search</button>
+      </div>
+    </div>
+  </header>
+  <!-- home sections of the website -->
+  <section class="home-section">
+    <video autoplay muted loop id="bg-video">
+      <source src="/video/background-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div> <!-- Transparent overlay -->
+    <div class="container">
+      <!-- sign up form -->
+      <div id="signupModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+
+          <form action="#">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Sign Up</button>
+          </form>
+        </div>
+      </div>
+      <!-- end sign up from -->
+      
+      <!-- sign form -->
+      <div id="signinModal" class="modal">
+        <div class="modal-content">
+          <span class="closee">&times;</span>
+
+          <form action="#">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Sign Up</button>
+            <div class="profile-links">
+              <a href="#">Manage Profile</a>
+              <a href="#">Update Personal Information</a>
+              <a href="#">Change Password</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- end sign in form -->
+      <!-- Content for the home page -->
+      <div class="content">
+        <h1 style="text-shadow: 2px 2px 8px #FF0000">Welcome to Yummy</h1>
+        <p style="color: darkturquoise;">Discover delicious recipes from around the world and share your culinary
+          creations with our community.</p>
+        <a href="#" class="btn butt">Explore Recipes</a>
+      </div>
+    </div>
+  </section>
+  <!-- create secton -->
+  <div class="container3" id="createRecipe">
+    <h1 style="text-shadow:2px 2px rgb(128, 232, 96);">Create your own Recipe </h1>
+    <div class="recipe-form">
+      <label for="recipe-title">Recipe Title:</label>
+      <input type="text" id="recipe-title" name="recipe-title" placeholder="Enter recipe title">
+
+      <label for="ingredients">Ingredients:</label>
+      <textarea id="ingredients" name="ingredients" placeholder="Enter ingredients"></textarea>
+
+      <label for="preparation-steps">Preparation Steps:</label>
+      <textarea id="preparation-steps" name="preparation-steps" placeholder="Enter preparation steps"></textarea>
+
+      <label for="cooking-time">Cooking Time (minutes):</label>
+      <input type="number" id="cooking-time" name="cooking-time" placeholder="Enter cooking time">
+
+      <label for="serving-size">Serving Size:</label>
+      <input type="number" id="serving-size" name="serving-size" placeholder="Enter serving size">
+
+      <label for="notes">Notes:</label>
+      <textarea id="notes" name="notes" placeholder="Enter optional notes"></textarea>
+
+      <button type="submit">Save Recipe</button>
+    </div>
+  </div>
+  <!-- .Community Interaction Features: -->
+  <div class="container4">
+    <div class="recipe">
+      <h2>Recipe Title</h2>
+
+      <div class="rating">
+        <!-- Rating stars -->
+      </div>
+
+
+
+
+    </div>
+
+
+
+
+
+    <!-- <div class="comments">
+
+    </div> -->
+
+    <form id="comment-form">
+      <!-- <input type="text" id="comment-input" placeholder="Leave a comment...">
+      <button type="submit">Submit</button> -->
+    </form>
+    <div class="sort-by-ratings">
+      <h4>Sort by Ratings</h4>
+      <button id="sort-highest">Highest Rated</button>
+      <button id="sort-lowest">Lowest Rated</button>
+    </div>
+
+  </div>
+
+
+  </div>
+  <!-- about us page------------------------------------- -->
+  <div class="about-section" id="About-Us">
+    <h1 style="margin: 15px;text-shadow:2px 2px blueviolet;">About Us </h1>
+    <p style="font-weight: bolder;font-size: 20px;">Some text about who we are and what we do.</p>
+
+  </div>
+
+  <h2 style="text-align:center;padding: 8px; margin: 10px;">Our Team</h2>
+  <div class="row abt">
+    <div class="column">
+      <div class="card" style="border: 2px solid white; border-radius: 10px;">
+        <img src="/image/profile1.jpeg" alt="Jane" style="width:100%;height: fit-content;" style="border-radius: 5px;">
+        <div class="container6">
+          <h2>Jane Doe</h2>
+          <p class="title">CEO & Founder</p>
+
+          <p><button class="button but">Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card" style="border: 2px solid white; border-radius: 10px;">
+        <img src="/image/profile2.jpeg" alt="Mike" style="width:100%">
+        <div class="container6">
+          <h2>Mike Ross</h2>
+          <p class="title">Art Director</p>
+
+
+
+
+          <p><button class="button but">Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card" style="border: 2px solid white; border-radius: 10px;">
+        <img src="/image/profile1.jpeg" alt="John" style="width:100%">
+        <div class="container6">
+          <h2>John Doe</h2>
+          <p class="title">Designer</p>
+
+          <p><button class="button but">Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- catagory section------------------------------------------- -->
+  <div class="category-section " id="Categories" style="margin-bottom:40px ;">
+    <h2 style="margin-bottom: 20px;">Categories</h2>
+    <div class="category-list">
+      <div class="category">
+        <!-- <img src="/image/morning.jpg" alt="Category 1" width="35%" height="auto"/> -->
+        <h3>Breakfast</h3>
+      </div>
+      <div class="category">
+        <!-- <img src="/image/morning.jpg"alt="Category 2"> -->
+        <h3>Lunch</h3>
+      </div>
+      <div class="category">
+        <!-- <img src="/image/morning.jpg" alt="Category 3"> -->
+        <h3>Dinner</h3>
+      </div>
+      <!-- Add more categories as needed -->
+    </div>
+  </div>
+  <!-- favorite chiefs...----------------------------------------------------- -->
+  <div class="container5">
+    <h1 style="color: brown;text-shadow:2px 2px blueviolet;">Our Contributers</h1>
+
+    <!-- Full-width images with number text -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <div style="display: flex;flex-direction: column;">
+        <img src="/image/chef3.jpeg" style="width:25% ;height: 25%;margin: auto;">
+        <button class="view ">view</button>
+        <button class="view  ">Follow</button>
+
+
+      </div>
+
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <div style="display: flex;flex-direction: column;">
+        <img src="/image/chef2.jpeg" style="width:25% ;height: 25%;margin: auto;">
+        <button class="view">view</button>
+        <button class="view">Follow</button>
+
+
+      </div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <div style="display: flex;flex-direction: column;">
+        <img src="/image/chef2.jpeg" style="width:25% ;height: 25%;margin: auto;">
+        <button class="view">view</button>
+        <button class="view">Follow</button>
+
+
+      </div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <div style="display: flex;flex-direction: column;">
+        <img src="/image/chef3.jpeg" style="width:25% ;height: 25%;margin: auto;">
+        <button class="view">view</button>
+        <button class="view">Follow</button>
+
+
+      </div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <div style="display: flex;flex-direction: column;">
+        <img src="/image/chef2.jpeg" style="width:25% ;height: 25%;margin: auto;">
+        <button class="view">view</button>
+        <button class="view">Follow</button>
+
+
+      </div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+      <div style="display: flex;flex-direction: column;">
+        <img src="/image/chef3.jpeg" style="width:25% ;height: 25%;margin: auto;">
+        <button class="view">view</button>
+        <button class="view">Follow</button>
+
+
+      </div>
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Image text -->
+    <!-- <div class="caption-container">
+      <p id="caption"></p>
+    </div> -->
+
+    <!-- Thumbnail images -->
+    <div class="row1">
+      <div class="column">
+        <img class="demo cursor" src="/image/chef3.jpeg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="/image/chef2.jpeg" style="width:100%" onclick="currentSlide(2)"
+          alt="Cinque Terre">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="/image/chef3.jpeg" style="width:100%" onclick="currentSlide(3)"
+          alt="Mountains and fjords">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="/image/chef2.jpeg" style="width:100%" onclick="currentSlide(4)"
+          alt="Northern Lights">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="/image/chef2.jpeg" style="width:100%" onclick="currentSlide(5)"
+          alt="Nature and sunrise">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="/image/chef3.jpeg" style="width:100%" onclick="currentSlide(6)"
+          alt="Snowy Mountains">
+      </div>
+    </div>
+  </div>
+  <div style="display: flex;">
+    <button class="view">join community</button>
+  </div>
+  <br><br><br><br><br>
+
+  <!-- footer of the page--------------------------------------------------- -->
+  <footer class="footer">
+    <div class="container7">
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h2>Our Patner</h2>
+          <a href=""><img src="/image/apple.jpeg" alt="" width="25%" height="50%"></a>
+          <a href=""><img src="/image/apple.jpeg" alt="" width="25%" height="50%"></a>
+          <a href=""><img src="/image/apple.jpeg" alt="" width="25%" height="50%"></a>
+
+
+        </div>
+        <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#createRecipe">Recipes</a></li>
+            <li><a href="#Categories">Categories</a></li>
+            <li><a href="#About-Us">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact-form">
+          <h2>Contact Us</h2>
+          <form>
+            <input type="email" name="email" class="text-input contact-input" placeholder="Your email address">
+            <textarea name="message" class="text-input contact-input" placeholder="Your message"></textarea>
+            <button type="submit" class="btn btn-primary but">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2024 Yummy | Designed by Jyotiranjan Mahapatra
+    </div>
+  </footer>
+
+  <br><br><br><br><br>
+  <!-- sidebar------------------------------------------------ -->
+
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+  </script>
+
+
+
+
+
+
+
+  <script src="/js/script.js"></script>
+  <script src="/js/signup.js"></script>
+  <script src="/js/sign.js"></script>
+
+</body>
+
+</html>

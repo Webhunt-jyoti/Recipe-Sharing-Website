@@ -1,0 +1,1019 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+/* Header styles */
+header.dark-theme {
+  background-color: #131c2b;
+
+
+
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo>.logo-heading {
+  font-family: "Bungee Shade", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.search-bar input[type="text"],
+.search-bar button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-bar input[type="text"] {
+  width: 300px;
+  background-color: #444;
+  color: #fff;
+}
+
+.search-bar .button1 {
+  background-color: #5cb85c;
+  color: #fff;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #4cae4c;
+}
+
+/* home ----------------------------------------------------- */
+.home-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+
+
+}
+
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Transparent overlay */
+}
+
+.container {
+  z-index: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.content p {
+  color: #fff;
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.content .btn {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.content .btn:hover {
+  background-color: #ddd;
+}
+
+.container h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.container p {
+  color: #fff;
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.container .btn {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.container .btn:hover {
+  background-color: #ddd;
+}
+
+/* create section------------------------------------------------------- */
+.container3 {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.recipe-form label {
+  display: block;
+  margin-top: 10px;
+  color: #555;
+}
+
+.recipe-form input[type="text"],
+.recipe-form input[type="number"],
+.recipe-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.recipe-form textarea {
+  height: 100px;
+}
+
+.recipe-form button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.recipe-form button:hover {
+  background-color: #45a049;
+}
+
+/* search and filter option -------------------------------- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-container {
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.search-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.autocomplete {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.filters {
+  width: 250px;
+}
+
+.filters h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.filter-option {
+  margin-bottom: 15px;
+}
+
+.filter-option label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.filter-option select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#apply-filters {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#apply-filters:hover {
+  background-color: #45a049;
+}
+
+.suggestion {
+  color: #000;
+  /* Set text color to black */
+  cursor: pointer;
+}
+
+.suggestion:hover {
+  background-color: #ddd;
+  /* Add hover effect */
+}
+
+/* .Community Interaction Features:------------------------------------ */
+/* CSS styles for Community Interaction Features */
+
+/* Recipe container */
+.container4 {
+  margin: 50px;
+  padding: 15px;
+}
+
+.recipe {
+  width: 70%;
+  margin-right: 30px;
+}
+
+.recipe-item {
+  margin-bottom: 40px;
+
+}
+
+.recipe-item h2 {
+  margin-bottom: 5px;
+}
+
+.rating {
+  margin-bottom: 10px;
+}
+
+.like-btn,
+.dislike-btn {
+  padding: 5px 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dislike-btn {
+  background-color: #f44336;
+}
+
+.like-btn:hover,
+.dislike-btn:hover {
+  background-color: #45a049;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 30%;
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.sidebar h3 {
+  margin-bottom: 15px;
+}
+
+/* Follow section */
+.follow-section {
+  margin-bottom: 20px;
+}
+
+/* Sort by ratings section */
+.sort-by-ratings {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.sort-by-ratings button {
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #008CBA;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sort-by-ratings button:hover {
+  background-color: #005f6b;
+}
+
+/* CSS styles for Recipe Sharing Website */
+
+/* Recipe container */
+.recipe {
+  width: 70%;
+  margin-right: 30px;
+}
+
+.recipe h2 {
+  margin-bottom: 10px;
+}
+
+/* Share buttons */
+.share-buttons {
+  margin-top: 20px;
+}
+
+.share-buttons h3 {
+  margin-bottom: 10px;
+}
+
+
+#share-facebook {
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #60b242;
+  /* Facebook blue */
+  color: #0a0606;
+  cursor: pointer;
+
+}
+.fb{
+  color: #000;
+}
+
+#share-twitter {
+  margin-right: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #60b242;
+  /* Facebook blue */
+  color: #0a0606;
+  cursor: pointer;
+
+}
+
+.share-buttons button:last-child {
+  background-color: #1DA1F2;
+  /* Twitter blue */
+}
+
+.share-buttons button:hover {
+  opacity: 0.8;
+}
+
+/* Comments section */
+.comments {
+  margin-top: 20px;
+}
+
+.comments h3 {
+  margin-bottom: 10px;
+}
+
+/* Comment form */
+#comment-form {
+  margin-top: 10px;
+}
+
+#comment-input {
+  width: calc(140% - 0px);
+  /* Adjust width according to your layout */
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 50px;
+}
+
+#comment-input:focus {
+  outline: none;
+}
+
+#comment-form button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4267B2;
+  /* Facebook blue */
+  color: #fff;
+  cursor: pointer;
+  width: fit-content;
+}
+
+#comment-form button:hover {
+  opacity: 0.8;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 30%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.sidebar h3 {
+  margin-bottom: 15px;
+}
+
+/* Follow section */
+.follow-section {
+  margin-bottom: 20px;
+}
+
+.follow-section h4 {
+  margin-bottom: 10px;
+}
+
+.follow-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.follow-section ul li {
+  margin-bottom: 5px;
+}
+
+/* Sort by ratings section */
+.sort-by-ratings {
+  margin-bottom: 20px;
+}
+
+.sort-by-ratings h4 {
+  margin-bottom: 10px;
+}
+
+.sort-by-ratings button {
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #008CBA;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sort-by-ratings button:hover {
+  background-color: #005f6b;
+}
+
+/* catagory section-------------------------------------------  */
+
+/* Category section styles */
+.category-section {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Category list styles */
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* gap: 250px; */
+}
+
+/* Individual category styles */
+.category {
+
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-image: url(/image/morning.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 307px;
+  height: 318px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #000;
+  font-weight: bold;
+
+}
+
+.category h3 {
+  border: 2px solid rgb(10, 8, 8);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.category:hover {
+
+  opacity: 0.5;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, .5);
+  transition: all .3s ease-in-out;
+
+
+}
+
+.category img {
+
+  border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+/* community feature ---------------------------------- */
+/* Slideshow container */
+
+
+
+.container5 {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.row1 .column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.view {
+  display: inline-block;
+  padding: 10px 80px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #1c32dc;
+  color: #0a0606;
+  cursor: pointer;
+  width: fit-content;
+
+  margin: 10px auto;
+
+
+  background-color: #af4c95;
+  /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-size: 16px;
+
+
+
+}
+
+.view:hover {
+  background-color: transparent;
+  border: 2px solid white;
+
+
+
+
+
+}
+
+.mySlides+img {
+  width: 50%;
+  object-fit: contain;
+  aspect-ratio: 3/2;
+  mix-blend-mode: color-burn;
+}
+.row1 img{
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+/* about us page------------------------- */
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: #2fed51;
+}
+
+.container6 {
+  padding: 0 16px;
+}
+
+.container6::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.container6 {
+  padding: 18px 20px;
+}
+
+.but {
+  padding: 10px 20px;
+  background-color: #aaaf4c;
+  /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  font-size: 16px;
+
+
+}
+
+.but:hover {
+  background-color: transparent;
+  border: 2px solid white;
+
+}
+
+.abt {
+  margin-bottom: 30px;
+}
+
+/* footer section------------------------------------------ */
+/* Footer styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0;
+}
+
+/* Container styles */
+.container7 {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Footer content styles */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Footer section styles */
+.footer-section {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.footer-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Contact form styles */
+.contact-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin: 10px;
+  border-radius:10px ;
+}
+
+/* Footer bottom styles */
+.footer-bottom {
+  background-color: #222;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer-section h2,
+a:hover {
+  color: palevioletred;
+
+}
+
+.footer-section a:hover {
+  color: rgb(19, 216, 241);
+
+}
+
+/* side bar ------------------------------------ */
+.sidebar {
+  padding-top: 15px;
+}
+
+.sidebar a {
+  font-size: 18px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -39px;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  display: none;
+}
+
+
+
+
+.butt {
+  padding: 10px 20px;
+  background-color: #d03bf9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  font-size: 16px;
+
+
+}
+
+.butt:hover {
+  background-color: 2px solid rgb(22, 243, 231);
+
+
+}
+
+
+
+
+/* Define styles for navigation items */
+.navv a {
+  position: relative;
+ 
+ 
+ 
+  text-decoration: none;
+}
+
+/* Define styles for underline */
+.navv a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #007bff; /* Change this to your desired underline color */
+  transition: width 0.3s ease; /* Control the speed of the underline */
+}
+
+/* Define hover effect */
+.navv a:hover::after {
+  width: 100%;
+}
